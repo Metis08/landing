@@ -1,0 +1,21 @@
+/* Clear default Vite styles that might interfere with MUI */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.continuous-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
