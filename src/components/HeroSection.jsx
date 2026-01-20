@@ -8,7 +8,7 @@ const HeroSection = () => {
             {/* Green Hero Container */}
             <Box
                 sx={{
-                    height: { xs: 'auto', md: '82vh' },
+                    minHeight: { xs: 'auto', md: '82vh' },
                     background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
                     borderRadius: '32px',
                     border: '1px solid #43805940',
@@ -18,7 +18,7 @@ const HeroSection = () => {
                     alignItems: 'center',
 
                     pt: { xs: 6, md: 8 },
-                    pb: { xs: 6, md: 12 }, // ✅ slightly increased to safely fit image
+                    pb: { xs: 6, md: 0 }, // Changed to 0 to let image sit naturally
 
                     overflow: 'hidden',
                 }}
@@ -66,12 +66,13 @@ const HeroSection = () => {
                     src={dashboardImg}
                     alt="Dashboard Preview"
                     sx={{
-                        width: '80%',
+                        width: { xs: '90%', md: '80%' },
                         maxWidth: '1000px',
                         height: 'auto',
-                        objectFit: 'cover',
+                        objectFit: 'contain',
 
-                        mt: { xs: 4, md: -18 }, // ✅ replaced transform with negative margin
+                        mt: { xs: 4, md: '-15vh' }, // Use vh for responsive overlap
+                        mb: { md: -5 }, // Slight negative bottom margin to anchor it
                     }}
                 />
             </Box>

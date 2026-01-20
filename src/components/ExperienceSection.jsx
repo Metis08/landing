@@ -84,7 +84,8 @@ const BrandsTrust = () => {
     ];
 
     const getPosition = (ring, angle) => {
-        const radius = ring === 1 ? 220 : ring === 2 ? 370 : 500;
+        // Use percentage-based radii for better responsiveness
+        const radius = ring === 1 ? 25 : ring === 2 ? 38 : 48; // Percentage of container width
         const radian = (angle * Math.PI) / 180;
         const x = Math.cos(radian) * radius;
         const y = Math.sin(radian) * radius;
@@ -94,28 +95,30 @@ const BrandsTrust = () => {
     return (
         <Box
             sx={{
-                mt: 6, // Decreased distance from numbers
+                mt: { xs: 2, md: 6 },
                 position: 'relative',
-                height: { xs: '600px', md: '1100px' },
+                width: '100%',
+                maxWidth: '1100px',
+                aspectRatio: '1/1',
+                mx: 'auto',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                overflow: 'hidden',
-                // Scale down on mobile to fit perfectly
-                transform: { xs: 'scale(0.35)', sm: 'scale(0.55)', md: 'scale(0.85)', lg: 'scale(1)' },
+                overflow: 'visible', // Allow logos to peak out if needed
             }}
         >
-            {/* Concentric Rings with solid colors matching image and enhanced shadows */}
-            <Box sx={{ position: 'absolute', width: '1050px', height: '1050px', borderRadius: '50%', bgcolor: '#438059', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }} />
-            <Box sx={{ position: 'absolute', width: '800px', height: '800px', borderRadius: '50%', bgcolor: '#7BA68C', boxShadow: '0 10px 35px rgba(0,0,0,0.1)' }} />
-            <Box sx={{ position: 'absolute', width: '550px', height: '550px', borderRadius: '50%', bgcolor: '#B5CCBE', boxShadow: '0 8px 30px rgba(0,0,0,0.08)' }} />
+            {/* Concentric Rings with responsive sizes */}
+            <Box sx={{ position: 'absolute', width: '100%', height: '100%', borderRadius: '50%', bgcolor: '#438059', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }} />
+            <Box sx={{ position: 'absolute', width: '80%', height: '80%', borderRadius: '50%', bgcolor: '#7BA68C', boxShadow: '0 10px 35px rgba(0,0,0,0.1)' }} />
+            <Box sx={{ position: 'absolute', width: '55%', height: '55%', borderRadius: '50%', bgcolor: '#B5CCBE', boxShadow: '0 8px 30px rgba(0,0,0,0.08)' }} />
 
             {/* Center Circle */}
             <Box
                 sx={{
                     position: 'absolute',
-                    width: '300px',
-                    height: '300px',
+                    width: '30%',
+                    height: '30%',
+                    minWidth: '120px',
                     borderRadius: '50%',
                     bgcolor: '#F9FBF9',
                     display: 'flex',
@@ -129,7 +132,7 @@ const BrandsTrust = () => {
                     sx={{
                         fontFamily: 'Poppins',
                         fontWeight: 700,
-                        fontSize: '32px',
+                        fontSize: { xs: '14px', sm: '20px', md: '28px', lg: '32px' },
                         color: '#000',
                         textAlign: 'center',
                         lineHeight: 1.2
@@ -147,11 +150,13 @@ const BrandsTrust = () => {
                         key={index}
                         sx={{
                             position: 'absolute',
-                            transform: `translate(${x}px, ${y}px)`,
+                            left: `${50 + x}%`,
+                            top: `${50 + y}%`,
+                            transform: 'translate(-50%, -50%)',
                             zIndex: 20,
                             transition: 'all 0.3s ease',
                             '&:hover': {
-                                transform: `translate(${x}px, ${y}px) scale(1.15)`,
+                                transform: 'translate(-50%, -50%) scale(1.15)',
                                 zIndex: 30,
                             }
                         }}
@@ -169,8 +174,9 @@ const BrandsTrust = () => {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 cursor: 'default',
-                                width: { xs: '90px', md: '145px' },
-                                height: { xs: '40px', md: '60px' },
+                                width: { xs: '60px', sm: '100px', md: '145px' },
+                                height: { xs: '30px', sm: '45px', md: '60px' },
+                                p: { xs: 0.5, md: 1 },
                                 overflow: 'hidden'
                             }}
                         >

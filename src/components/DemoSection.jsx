@@ -17,7 +17,7 @@ const DemoSection = () => {
                     maxWidth: '1920px',
                     mx: 'auto',
                     borderRadius: '40px',
-                    p: { xs: 4, md: 8, lg: 10 },
+                    p: { xs: 3, sm: 6, md: 8, lg: 10 },
                     background: 'linear-gradient(to bottom, #F9FBF9 0%, #E8F5E9 100%)',
                     border: '1.5px solid rgba(0,0,0,0.08)',
                     display: 'flex',
@@ -49,7 +49,7 @@ const DemoSection = () => {
                         bgcolor: '#fff',
                         borderRadius: '32px',
                         boxShadow: '0 30px 90px rgba(37, 124, 66, 0.08)',
-                        p: { xs: 2.5, md: 7 },
+                        p: { xs: 3, sm: 4, md: 7 },
                         border: '1px solid rgba(37, 124, 66, 0.12)',
                         transition: 'transform 0.4s ease',
                         '&:hover': {
@@ -58,16 +58,16 @@ const DemoSection = () => {
                     }}
                 >
                     {/* Form Header */}
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 5 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1.5, md: 2 }, mb: { xs: 3, md: 5 } }}>
                         <Box sx={{
-                            p: 1.5,
+                            p: { xs: 1, md: 1.5 },
                             borderRadius: '12px',
                             bgcolor: 'rgba(37, 124, 66, 0.08)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                            <ForumIcon sx={{ color: '#257C42', fontSize: '32px' }} />
+                            <ForumIcon sx={{ color: '#257C42', fontSize: { xs: '24px', md: '32px' } }} />
                         </Box>
                         <Typography
                             variant="h5"
@@ -75,7 +75,7 @@ const DemoSection = () => {
                                 color: '#1a5930',
                                 fontWeight: 600,
                                 fontFamily: 'Poppins',
-                                fontSize: '28px'
+                                fontSize: { xs: '22px', md: '28px' }
                             }}
                         >
                             Request a Demo
@@ -196,26 +196,26 @@ const DemoSection = () => {
                             sx={{
                                 border: '1px solid rgba(0,0,0,0.1)',
                                 borderRadius: '12px',
-                                p: 2,
+                                p: { xs: 1.5, md: 2 },
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'space-between',
                                 bgcolor: '#fcfdfc',
-                                width: 'fit-content',
-                                minWidth: { xs: '280px', sm: '320px' },
+                                width: '100%',
+                                maxWidth: { xs: '100%', sm: '320px' },
                                 alignSelf: 'center',
                                 mt: 2,
                                 boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
                             }}
                         >
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                <Box sx={{ width: '28px', height: '28px', border: '2px solid #257C42', borderRadius: '4px', bgcolor: '#fff' }} />
-                                <Typography sx={{ fontSize: '15px', color: '#333', fontWeight: 400 }}>I'm not a robot</Typography>
+                                <Box sx={{ width: '28px', height: '28px', border: '2px solid #257C42', borderRadius: '4px', bgcolor: '#fff', flexShrink: 0 }} />
+                                <Typography sx={{ fontSize: { xs: '13px', md: '15px' }, color: '#333', fontWeight: 400 }}>I'm not a robot</Typography>
                             </Box>
                             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <Box sx={{ width: '44px', height: '44px', bgcolor: '#eee', borderRadius: '50%', mb: 0.5 }} />
-                                <Typography sx={{ fontSize: '10px', color: '#999' }}>reCAPTCHA</Typography>
-                                <Typography sx={{ fontSize: '8px', color: '#999' }}>Privacy - Terms</Typography>
+                                <Box sx={{ width: '32px', height: '32px', bgcolor: '#eee', borderRadius: '50%', mb: 0.5 }} />
+                                <Typography sx={{ fontSize: '9px', color: '#999' }}>reCAPTCHA</Typography>
+                                <Typography sx={{ fontSize: '7px', color: '#999' }}>Privacy - Terms</Typography>
                             </Box>
                         </Box>
 
