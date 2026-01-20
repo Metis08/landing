@@ -8,7 +8,7 @@ const HeroSection = () => {
             {/* Green Hero Container */}
             <Box
                 sx={{
-                    height: '80vh',
+                    height: { xs: 'auto', md: '80vh' },
                     background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
                     borderRadius: '32px',
                     border: '1px solid #43805940',
@@ -17,8 +17,8 @@ const HeroSection = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
 
-                    pt: 8,
-                    pb: 10, // 🔑 space for image
+                    pt: { xs: 6, md: 8 },
+                    pb: { xs: 6, md: 12 }, // ✅ slightly increased to safely fit image
 
                     overflow: 'hidden',
                 }}
@@ -46,10 +46,11 @@ const HeroSection = () => {
                     <Typography
                         sx={{
                             fontFamily: 'Poppins',
-                            fontSize: '22px',
+                            fontSize: { xs: '18px', md: '22px' },
                             color: '#4A4A4A',
                             maxWidth: '700px',
                             mx: 'auto',
+                            px: 2,
                             fontWeight: 400,
                             lineHeight: 1.6,
                         }}
@@ -70,17 +71,18 @@ const HeroSection = () => {
                         height: 'auto',
                         objectFit: 'cover',
 
-                        transform: 'translateY(-150px)', // Adjusted translation due to smaller size
+                        mt: { xs: 4, md: -18 }, // ✅ replaced transform with negative margin
                     }}
                 />
             </Box>
 
             {/* CTA Buttons */}
             <Stack
-                direction="row"
+                direction={{ xs: 'column', sm: 'row' }}
                 spacing={2}
                 justifyContent="center"
-                sx={{ mt: 7 }}
+                alignItems="center"
+                sx={{ mt: { xs: 5, md: 7 } }}
             >
                 <Button
                     variant="outlined"
@@ -88,11 +90,12 @@ const HeroSection = () => {
                         fontFamily: 'Poppins',
                         borderColor: '#438059',
                         color: '#438059',
-                        px: 7,
-                        py: 2.5,
-                        fontSize: '20px',
+                        px: { xs: 4, md: 5 },
+                        py: { xs: 1.5, md: 1.5 },
+                        fontSize: { xs: '16px', md: '20px' },
                         borderRadius: '100px',
                         textTransform: 'none',
+                        width: { xs: '100%', sm: 'auto' },
                     }}
                 >
                     Start my free trial
@@ -104,11 +107,12 @@ const HeroSection = () => {
                     sx={{
                         fontFamily: 'Poppins',
                         backgroundColor: '#438059',
-                        px: 5,
-                        py: 1.5,
-                        fontSize: '20px',
+                        px: { xs: 4, md: 5 },
+                        py: { xs: 1.5, md: 1.5 },
+                        fontSize: { xs: '16px', md: '20px' },
                         borderRadius: '100px',
                         textTransform: 'none',
+                        width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                             backgroundColor: '#366848',
                         },

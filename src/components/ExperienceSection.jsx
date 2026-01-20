@@ -64,23 +64,23 @@ const AnimatedCounter = ({ endValue, suffix, duration = 2000 }) => {
 const BrandsTrust = () => {
     const brands = [
         // Ring 1 (Inner) - Radius ~150px
-        { name: 'airtel', ring: 1, angle: -90, color: '#e40000' },
-        { name: 'DreamFolks', ring: 1, angle: 30, color: '#000' },
-        { name: 'Paradeep Phosphates', ring: 1, angle: 150, color: '#004a8e' },
+        { name: 'airtel', logo: '/airtel.png', ring: 1, angle: -90, color: '#e40000' },
+        { name: 'DreamFolks', logo: '/dreamfolks.png', ring: 1, angle: 30, color: '#000' },
+        { name: 'Paradeep Phosphates', logo: '/paradeep.png', ring: 1, angle: 150, color: '#004a8e' },
 
         // Ring 2 (Middle) - Radius ~280px
-        { name: 'Bata', ring: 2, angle: -120, color: '#d32f2f' },
-        { name: 'igl', ring: 2, angle: -45, color: '#000' },
-        { name: 'JK TYRE', ring: 2, angle: 0, color: '#000' },
-        { name: 'Coforge', ring: 2, angle: 180, color: '#004a8e' },
-        { name: 'Brookfield', ring: 2, angle: 140, color: '#004a8e' },
-        { name: 'wipro', ring: 2, angle: 60, color: '#6a1b9a' },
-        { name: 'SOUTH INDIAN Bank', ring: 2, angle: 90, color: '#d32f2f' },
+        { name: 'Bata', logo: '/bata.png', ring: 2, angle: -120, color: '#d32f2f' },
+        { name: 'igl', logo: '/igl.png', ring: 2, angle: -45, color: '#000' },
+        { name: 'JK TYRE', logo: '/download.png', ring: 2, angle: 0, color: '#000' },
+        { name: 'Coforge', logo: '/coforage.png', ring: 2, angle: 180, color: '#004a8e' },
+        { name: 'Brookfield', logo: '/brookfield.png', ring: 2, angle: 140, color: '#004a8e' },
+        { name: 'wipro', logo: '/wipro.png', ring: 2, angle: 60, color: '#6a1b9a' },
+        { name: 'SOUTH INDIAN Bank', logo: '/southindian.png', ring: 2, angle: 90, color: '#d32f2f' },
 
         // Ring 3 (Outer) - Radius ~400px
-        { name: 'RELAXO', ring: 3, angle: -90, color: '#004a8e' },
-        { name: 'NOWFLOATS', ring: 3, angle: 210, color: '#f57c00' },
-        { name: 'Netweb', ring: 3, angle: -30, color: '#0288d1' }
+        { name: 'RELAXO', logo: '/relaxo.png', ring: 3, angle: -90, color: '#004a8e' },
+        { name: 'NOWFLOATS', logo: '/nowfloats.png', ring: 3, angle: 210, color: '#f57c00' },
+        { name: 'Netweb', logo: '/download(9).png', ring: 3, angle: -30, color: '#0288d1' }
     ];
 
     const getPosition = (ring, angle) => {
@@ -101,8 +101,8 @@ const BrandsTrust = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 overflow: 'hidden',
-                // Scale down on mobile to fit
-                transform: { xs: 'scale(0.5)', sm: 'scale(0.7)', md: 'scale(1)' },
+                // Scale down on mobile to fit perfectly
+                transform: { xs: 'scale(0.35)', sm: 'scale(0.55)', md: 'scale(0.85)', lg: 'scale(1)' },
             }}
         >
             {/* Concentric Rings with solid colors matching image and enhanced shadows */}
@@ -159,25 +159,37 @@ const BrandsTrust = () => {
                         <Box
                             sx={{
                                 bgcolor: '#fff',
-                                px: 3,
-                                py: 1.5,
+                                px: 1.5,
+                                py: 1,
                                 borderRadius: '12px',
                                 boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                                 color: brand.color,
-                                fontWeight: 700,
-                                fontSize: '14px',
-                                whiteSpace: 'nowrap',
-                                cursor: 'default',
                                 border: '1px solid rgba(0,0,0,0.05)',
                                 display: 'flex',
                                 alignItems: 'center',
-                                gap: 1
+                                justifyContent: 'center',
+                                cursor: 'default',
+                                width: { xs: '90px', md: '145px' },
+                                height: { xs: '40px', md: '60px' },
+                                overflow: 'hidden'
                             }}
                         >
-                            {/* Simple text representation of logos */}
-                            <Typography sx={{ fontWeight: 600, fontSize: '16px', textTransform: brand.name === 'airtel' ? 'lowercase' : 'none' }}>
-                                {brand.name}
-                            </Typography>
+                            {brand.logo ? (
+                                <Box
+                                    component="img"
+                                    src={brand.logo}
+                                    alt={brand.name}
+                                    sx={{
+                                        maxWidth: '100%',
+                                        maxHeight: '100%',
+                                        objectFit: 'contain'
+                                    }}
+                                />
+                            ) : (
+                                <Typography sx={{ fontWeight: 600, fontSize: '14px', textAlign: 'center', lineHeight: 1.2 }}>
+                                    {brand.name}
+                                </Typography>
+                            )}
                         </Box>
                     </Box>
                 );
@@ -222,13 +234,13 @@ const ExperienceSection = () => {
                     display: 'flex',
                     flexWrap: 'wrap',
                     justifyContent: 'center',
-                    gap: { xs: 4, md: 12 },
+                    gap: { xs: 4, md: 8, lg: 12 },
                     maxWidth: '1200px',
                     mx: 'auto'
                 }}
             >
                 {stats.map((stat, index) => (
-                    <Box key={index} sx={{ minWidth: '150px' }}>
+                    <Box key={index} sx={{ minWidth: { xs: '120px', md: '150px' }, flex: { xs: '1 0 40%', md: '0' } }}>
                         <AnimatedCounter endValue={stat.value} suffix={stat.suffix} />
                         <Typography
                             sx={{

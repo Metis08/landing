@@ -21,24 +21,63 @@ const SolutionCard = ({ title, highlight, description, align = 'left' }) => {
                 gap: { xs: 3, md: 6, lg: 8 },
                 bgcolor: '#fff',
                 transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.02)',
+                border: '3px solid rgba(0,0,0,0.08)',
+                boxShadow: '0 20px 60px rgba(0, 0, 0, 0.06)',
                 '&:hover': {
-                    boxShadow: '0 30px 60px rgba(0,0,0,0.08)',
-                    transform: 'translateY(-8px)',
+                    boxShadow: '0 60px 100px rgba(0,0,0,0.15)',
+                    transform: 'translateY(-12px)',
                 }
             }}
         >
-            {/* Image Placeholder Box */}
+            {/* Image Placeholder Box with Concentric Circles */}
             <Box
                 sx={{
                     width: { xs: '100%', md: '50%' },
-                    height: { xs: '250px', md: '400px' },
+                    height: { xs: '180px', sm: '220px', md: '350px' },
                     bgcolor: '#fff',
                     border: '1.5px solid rgba(0,0,0,0.05)',
                     borderRadius: '35px',
                     boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.02), 0 15px 35px rgba(0,0,0,0.05)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden'
                 }}
-            />
+            >
+                {/* Concentric Circles - Responsive sizing */}
+                {[...Array(3)].map((_, i) => (
+                    <Box
+                        key={i}
+                        sx={{
+                            position: 'absolute',
+                            width: {
+                                xs: `${(i + 1) * 60}px`,
+                                sm: `${(i + 1) * 80}px`,
+                                md: `${(i + 1) * 120}px`
+                            },
+                            height: {
+                                xs: `${(i + 1) * 60}px`,
+                                sm: `${(i + 1) * 80}px`,
+                                md: `${(i + 1) * 120}px`
+                            },
+                            border: '1px solid rgba(37, 124, 66, 0.12)',
+                            borderRadius: '50%',
+                        }}
+                    />
+                ))}
+
+                {/* Center dot/icon placeholder */}
+                <Box
+                    sx={{
+                        width: { xs: '12px', md: '20px' },
+                        height: { xs: '12px', md: '20px' },
+                        bgcolor: '#257C42',
+                        borderRadius: '50%',
+                        opacity: 0.6
+                    }}
+                />
+            </Box>
 
             {/* Content Box */}
             <Box sx={{ width: { xs: '100%', md: '45%' }, textAlign: 'left', pl: isLeft ? { md: 4 } : 0, pr: !isLeft ? { md: 4 } : 0 }}>
@@ -47,10 +86,11 @@ const SolutionCard = ({ title, highlight, description, align = 'left' }) => {
                     sx={{
                         fontFamily: 'Poppins',
                         fontWeight: 600,
-                        fontSize: { xs: '42px', md: '56px', lg: '64px' },
+                        fontSize: { xs: '28px', md: '56px', lg: '64px' },
                         color: '#000',
-                        lineHeight: 1.05,
-                        mb: 2
+                        lineHeight: 1.15,
+                        mb: 2,
+
                     }}
                 >
                     {title} <br />

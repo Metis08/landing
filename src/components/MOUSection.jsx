@@ -20,7 +20,7 @@ const MOUSection = () => {
                     width: '100%',
                     maxWidth: '1920px',
                     mx: 'auto',
-                    mb: 16,
+                    mb: { xs: 8, md: 16 },
                     borderRadius: '48px',
                     p: { xs: 5, md: 8, lg: 10 },
                     position: 'relative',
@@ -56,7 +56,7 @@ const MOUSection = () => {
                         sx={{
                             fontFamily: 'Poppins',
                             fontWeight: 700,
-                            fontSize: { xs: '42px', md: '56px', lg: '64px' },
+                            fontSize: { xs: '32px', md: '56px', lg: '64px' },
                             color: '#000',
                             mb: 3,
                             letterSpacing: '-0.03em',
@@ -124,18 +124,19 @@ const MOUSection = () => {
                     <Button
                         variant="contained"
                         sx={{
-                            position: { md: 'absolute' },
+                            position: { xs: 'relative', md: 'absolute' },
                             bottom: { md: '0px' },
                             right: { md: '0px' },
-                            mt: { xs: 6, md: 0 },
+                            mt: { xs: 4, md: 0 },
                             bgcolor: '#1a5930',
                             color: '#fff',
                             fontWeight: 700,
-                            fontSize: '20px',
-                            px: 7,
-                            py: 2.5,
+                            fontSize: { xs: '18px', md: '20px' },
+                            px: { xs: 5, md: 7 },
+                            py: { xs: 1.8, md: 2.5 },
                             borderRadius: '100px',
                             textTransform: 'none',
+                            width: { xs: '100%', md: 'auto' },
                             boxShadow: '0 10px 30px rgba(26, 89, 48, 0.3)',
                             '&:hover': {
                                 bgcolor: '#144626',
@@ -157,7 +158,7 @@ const MOUSection = () => {
                     sx={{
                         fontFamily: 'Poppins',
                         fontWeight: 700,
-                        fontSize: { xs: '42px', md: '56px', lg: '64px' },
+                        fontSize: { xs: '32px', md: '56px', lg: '64px' },
                         color: '#000',
                         mb: 8,
                         letterSpacing: '-0.04em'
@@ -172,7 +173,7 @@ const MOUSection = () => {
                         flexWrap: 'wrap',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        gap: { xs: 4, md: 6 }
+                        gap: { xs: 2.5, md: 6 }
                     }}
                 >
                     {/* ISO Badge Card */}

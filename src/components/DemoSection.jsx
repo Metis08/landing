@@ -31,7 +31,7 @@ const DemoSection = () => {
                     sx={{
                         fontFamily: 'Poppins',
                         fontWeight: 700,
-                        fontSize: { xs: '42px', md: '56px', lg: '64px' },
+                        fontSize: { xs: '32px', md: '56px', lg: '64px' },
                         color: '#000',
                         mb: 6,
                         textAlign: 'center',
@@ -49,7 +49,7 @@ const DemoSection = () => {
                         bgcolor: '#fff',
                         borderRadius: '32px',
                         boxShadow: '0 30px 90px rgba(37, 124, 66, 0.08)',
-                        p: { xs: 4, md: 7 },
+                        p: { xs: 2.5, md: 7 },
                         border: '1px solid rgba(37, 124, 66, 0.12)',
                         transition: 'transform 0.4s ease',
                         '&:hover': {
@@ -202,7 +202,7 @@ const DemoSection = () => {
                                 justifyContent: 'space-between',
                                 bgcolor: '#fcfdfc',
                                 width: 'fit-content',
-                                minWidth: '320px',
+                                minWidth: { xs: '280px', sm: '320px' },
                                 alignSelf: 'center',
                                 mt: 2,
                                 boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
