@@ -4,11 +4,11 @@ import dashboardImg from '../assets/hero-dashboard.png';
 
 const HeroSection = () => {
     return (
-        <Box sx={{ px: 3, mt: 6 }}>
+        <Box sx={{ px: 4, mt: 7 }}>
             {/* Green Hero Container */}
             <Box
                 sx={{
-                    height: { xs: 'auto', md: '80vh' },
+                    height: { xs: 'auto', md: '82vh' },
                     background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
                     borderRadius: '32px',
                     border: '1px solid #43805940',
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 spacing={2}
                 justifyContent="center"
                 alignItems="center"
-                sx={{ mt: { xs: 5, md: 7 } }}
+                sx={{ mt: { xs: 2, md: 5 } }}
             >
                 <Button
                     variant="outlined"
@@ -90,7 +90,7 @@ const HeroSection = () => {
                         fontFamily: 'Poppins',
                         borderColor: '#438059',
                         color: '#438059',
-                        px: { xs: 4, md: 5 },
+                        px: { xs: 2, md: 4 },
                         py: { xs: 1.5, md: 1.5 },
                         fontSize: { xs: '16px', md: '20px' },
                         borderRadius: '100px',
