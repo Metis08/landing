@@ -4,10 +4,11 @@ import dashboardImg from '../assets/hero-dashboard.png';
 
 const HeroSection = () => {
     return (
-        <Box sx={{ px: { xs: 2, sm: 4 }, mt: { xs: 2, md: 4 } }}>
+        <Box sx={{ px: { xs: 2, sm: 4 }, mt: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {/* Green Hero Container */}
             <Box
                 sx={{
+                    width: '100%',
                     minHeight: { xs: 'auto', md: '65vh' },
                     background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
                     borderRadius: { xs: '24px', md: '32px' },
@@ -18,7 +19,7 @@ const HeroSection = () => {
                     alignItems: 'center',
 
                     pt: { xs: 4, sm: 5, md: 5 },
-                    pb: { xs: 3, md: 0 },
+                    pb: 0,
 
                     overflow: 'hidden',
                 }}
@@ -84,7 +85,7 @@ const HeroSection = () => {
                 spacing={2}
                 justifyContent="center"
                 alignItems="center"
-                sx={{ mt: { xs: 2, md: 1.5 } }}
+                sx={{ mt: 4 }} // Standardized fixed gap for all screens
             >
                 <Button
                     variant="outlined"
