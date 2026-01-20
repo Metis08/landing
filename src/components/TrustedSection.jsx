@@ -32,10 +32,10 @@ const TrustedSection = () => {
 
     // Use a ref for scrollSpeed to ensure the animation loop (requestAnimationFrame) 
     // always uses the latest value even after HMR or re-renders.
-    const scrollSpeedRef = useRef(isMobile ? 0.25 : 0.35);
+    const scrollSpeedRef = useRef(isMobile ? 0.15 : 0.35);
 
     useEffect(() => {
-        scrollSpeedRef.current = isMobile ? 0.25 : 0.35;
+        scrollSpeedRef.current = isMobile ? 0.15 : 0.35;
     }, [isMobile]);
 
     const updateAnimation = (time) => {
@@ -150,7 +150,7 @@ const TrustedSection = () => {
                             sx={{
                                 bgcolor: '#fff',
                                 p: 1,
-                                borderRadius: '40px',
+                                borderRadius: '24px',
                                 boxShadow: '0 25px 50px rgba(0,0,0,0.08)',
                                 overflow: 'hidden',
                             }}
@@ -163,7 +163,7 @@ const TrustedSection = () => {
                                     width: '100%',
                                     aspectRatio: '21 / 9',
                                     objectFit: 'cover',
-                                    borderRadius: '32px',
+                                    borderRadius: '20px',
                                     display: 'block'
                                 }}
                             />

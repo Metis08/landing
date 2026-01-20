@@ -4,11 +4,11 @@ import dashboardImg from '../assets/hero-dashboard.png';
 
 const HeroSection = () => {
     return (
-        <Box sx={{ px: { xs: 2, sm: 4 }, mt: { xs: 4, md: 7 } }}>
+        <Box sx={{ px: { xs: 2, sm: 4 }, mt: { xs: 2, md: 4 } }}>
             {/* Green Hero Container */}
             <Box
                 sx={{
-                    minHeight: { xs: 'auto', md: '80vh' },
+                    minHeight: { xs: 'auto', md: '65vh' },
                     background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
                     borderRadius: { xs: '24px', md: '32px' },
                     border: '1px solid #43805940',
@@ -17,8 +17,8 @@ const HeroSection = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
 
-                    pt: { xs: 5, sm: 6, md: 8 },
-                    pb: { xs: 4, md: 0 },
+                    pt: { xs: 4, sm: 5, md: 5 },
+                    pb: { xs: 3, md: 0 },
 
                     overflow: 'hidden',
                 }}
@@ -28,12 +28,12 @@ const HeroSection = () => {
                     <Typography
                         sx={{
                             fontFamily: 'Poppins',
-                            fontSize: { xs: '32px', sm: '42px', md: '56px', lg: '64px' },
+                            fontSize: { xs: '32px', sm: '42px', md: '50px', lg: '64px' },
                             fontWeight: 700,
                             lineHeight: 1.1,
                             maxWidth: '1100px',
                             mx: 'auto',
-                            mb: 2,
+                            mb: 1.5,
                             px: 2,
                             letterSpacing: '-0.02em',
                         }}
@@ -72,8 +72,8 @@ const HeroSection = () => {
                         height: 'auto',
                         objectFit: 'contain',
 
-                        mt: { xs: 3, sm: 4, md: '-12vh', lg: '-15vh' },
-                        mb: { xs: -2, md: -5 },
+                        mt: { xs: 3, sm: 4, md: '-14vh', lg: '-15vh' },
+                        mb: { xs: -2, md: -4 },
                     }}
                 />
             </Box>
@@ -84,7 +84,7 @@ const HeroSection = () => {
                 spacing={2}
                 justifyContent="center"
                 alignItems="center"
-                sx={{ mt: { xs: 2, md: 5 } }}
+                sx={{ mt: { xs: 2, md: 1.5 } }}
             >
                 <Button
                     variant="outlined"
