@@ -18,7 +18,7 @@ const DemoSection = () => {
                     mx: 'auto',
                     borderRadius: '40px',
                     p: { xs: 3, sm: 6, md: 8, lg: 10 },
-                    background: 'linear-gradient(to bottom, #F9FBF9 0%, #E8F5E9 100%)',
+                    background: 'linear-gradient(to bottom, #F9FBF9 0%, #739dc7ff 100%)',
                     border: '1.5px solid rgba(0,0,0,0.08)',
                     display: 'flex',
                     flexDirection: 'column',
@@ -67,12 +67,12 @@ const DemoSection = () => {
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                            <ForumIcon sx={{ color: '#257C42', fontSize: { xs: '24px', md: '32px' } }} />
+                            <ForumIcon sx={{ color: '#17426C', fontSize: { xs: '24px', md: '32px' } }} />
                         </Box>
                         <Typography
                             variant="h5"
                             sx={{
-                                color: '#1a5930',
+                                color: '#17426C',
                                 fontWeight: 600,
                                 fontFamily: 'Poppins',
                                 fontSize: { xs: '22px', md: '28px' }
@@ -91,17 +91,17 @@ const DemoSection = () => {
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <PersonOutlineIcon sx={{ color: '#257C42', opacity: 0.7 }} />
+                                        <PersonOutlineIcon sx={{ color: '#17426C', opacity: 0.7 }} />
                                     </InputAdornment>
                                 ),
                             }}
                             sx={{
                                 '& .MuiOutlinedInput-root': {
                                     borderRadius: '16px',
-                                    '&:hover fieldset': { borderColor: '#257C42' },
-                                    '&.Mui-focused fieldset': { borderColor: '#257C42' }
+                                    '&:hover fieldset': { borderColor: '#17426C2' },
+                                    '&.Mui-focused fieldset': { borderColor: '#17426C' }
                                 },
-                                '& .MuiInputLabel-root.Mui-focused': { color: '#257C42' }
+                                '& .MuiInputLabel-root.Mui-focused': { color: '#17426C' }
                             }}
                         />
 
@@ -112,17 +112,17 @@ const DemoSection = () => {
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <EmailOutlineIcon sx={{ color: '#257C42', opacity: 0.7 }} />
+                                        <EmailOutlineIcon sx={{ color: '#17426C', opacity: 0.7 }} />
                                     </InputAdornment>
                                 ),
                             }}
                             sx={{
                                 '& .MuiOutlinedInput-root': {
                                     borderRadius: '16px',
-                                    '&:hover fieldset': { borderColor: '#257C42' },
-                                    '&.Mui-focused fieldset': { borderColor: '#257C42' }
+                                    '&:hover fieldset': { borderColor: '#17426C' },
+                                    '&.Mui-focused fieldset': { borderColor: '#17426C' }
                                 },
-                                '& .MuiInputLabel-root.Mui-focused': { color: '#257C42' }
+                                '& .MuiInputLabel-root.Mui-focused': { color: '#17426C' }
                             }}
                         />
 
@@ -133,17 +133,17 @@ const DemoSection = () => {
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <PhoneIcon sx={{ color: '#257C42', opacity: 0.7, fontSize: '20px' }} />
+                                        <PhoneIcon sx={{ color: '#17426C', opacity: 0.7, fontSize: '20px' }} />
                                     </InputAdornment>
                                 ),
                             }}
                             sx={{
                                 '& .MuiOutlinedInput-root': {
                                     borderRadius: '16px',
-                                    '&:hover fieldset': { borderColor: '#257C42' },
-                                    '&.Mui-focused fieldset': { borderColor: '#257C42' }
+                                    '&:hover fieldset': { borderColor: '#17426C' },
+                                    '&.Mui-focused fieldset': { borderColor: '#17426C' }
                                 },
-                                '& .MuiInputLabel-root.Mui-focused': { color: '#257C42' }
+                                '& .MuiInputLabel-root.Mui-focused': { color: '#17426C ' }
                             }}
                         />
 
@@ -154,17 +154,17 @@ const DemoSection = () => {
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start">
-                                        <BusinessIcon sx={{ color: '#257C42', opacity: 0.7 }} />
+                                        <BusinessIcon sx={{ color: '#17426C', opacity: 0.7 }} />
                                     </InputAdornment>
                                 ),
                             }}
                             sx={{
                                 '& .MuiOutlinedInput-root': {
                                     borderRadius: '16px',
-                                    '&:hover fieldset': { borderColor: '#257C42' },
-                                    '&.Mui-focused fieldset': { borderColor: '#257C42' }
+                                    '&:hover fieldset': { borderColor: '#17426C' },
+                                    '&.Mui-focused fieldset': { borderColor: '#17426C2' }
                                 },
-                                '& .MuiInputLabel-root.Mui-focused': { color: '#257C42' }
+                                '& .MuiInputLabel-root.Mui-focused': { color: '#17426C' }
                             }}
                         />
 
@@ -177,17 +177,17 @@ const DemoSection = () => {
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position="start" sx={{ alignSelf: 'flex-start', mt: 1 }}>
-                                        <ChatBubbleOutlineIcon sx={{ color: '#257C42', opacity: 0.7 }} />
+                                        <ChatBubbleOutlineIcon sx={{ color: '#17426C', opacity: 0.7 }} />
                                     </InputAdornment>
                                 ),
                             }}
                             sx={{
                                 '& .MuiOutlinedInput-root': {
                                     borderRadius: '16px',
-                                    '&:hover fieldset': { borderColor: '#257C42' },
-                                    '&.Mui-focused fieldset': { borderColor: '#257C42' }
+                                    '&:hover fieldset': { borderColor: '#17426C' },
+                                    '&.Mui-focused fieldset': { borderColor: '#17426C' }
                                 },
-                                '& .MuiInputLabel-root.Mui-focused': { color: '#257C42' }
+                                '& .MuiInputLabel-root.Mui-focused': { color: '#17426C' }
                             }}
                         />
 
@@ -209,7 +209,7 @@ const DemoSection = () => {
                             }}
                         >
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                <Box sx={{ width: '28px', height: '28px', border: '2px solid #257C42', borderRadius: '4px', bgcolor: '#fff', flexShrink: 0 }} />
+                                <Box sx={{ width: '28px', height: '28px', border: '2px solid #17426C2', borderRadius: '4px', bgcolor: '#fff', flexShrink: 0 }} />
                                 <Typography sx={{ fontSize: { xs: '13px', md: '15px' }, color: '#333', fontWeight: 400 }}>I'm not a robot</Typography>
                             </Box>
                             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -224,8 +224,8 @@ const DemoSection = () => {
                             sx={{
                                 mt: 4,
                                 py: 2.2,
-                                bgcolor: '#1a5930',
-                                color: '#fff',
+                                bgcolor: '#AFD450',
+                                color: '#17426C',
                                 fontWeight: 600,
                                 fontSize: '18px',
                                 borderRadius: '100px',

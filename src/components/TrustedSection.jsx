@@ -118,7 +118,7 @@ const TrustedSection = () => {
                 width: '100%',
                 py: 0,
                 overflow: 'hidden',
-                background: 'linear-gradient(to bottom, #fff 15%, #43805935 50%, #fff 85%)',
+                background: 'linear-gradient(to bottom, #fff 15%, #92a7bdff 50%, #fff 85%)',
             }}
         >
             {/* 1. Feature Dashboard Carousel - Ultra-Light Scaling Version */}
@@ -197,11 +197,11 @@ const TrustedSection = () => {
                         }}
                     >
                         Trusted by{' '}
-                        <Box component="span" sx={{ color: '#257C42' }}>
+                        <Box component="span" sx={{ color: '#17426C' }}>
                             businesses
                         </Box>{' '}
                         and{' '}
-                        <Box component="span" sx={{ color: '#257C42' }}>
+                        <Box component="span" sx={{ color: '#17426C' }}>
                             accountants
                         </Box>{' '}
                         worldwide
@@ -235,7 +235,7 @@ const TrustedSection = () => {
                                         </Typography>
                                         <Stack direction="row" spacing={2} alignItems="center">
                                             <Rating value={t.rating} readOnly sx={{ color: '#FABB05' }} />
-                                            <Typography sx={{ fontWeight: 700, fontSize: '18px', color: '#257C42' }}>
+                                            <Typography sx={{ fontWeight: 700, fontSize: '18px', color: '#17426C2' }}>
                                                 — {t.author}
                                             </Typography>
                                         </Stack>

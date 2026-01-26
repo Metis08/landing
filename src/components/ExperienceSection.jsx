@@ -54,7 +54,7 @@ const AnimatedCounter = ({ endValue, suffix, duration = 2000 }) => {
             }}
         >
             {count}
-            <Box component="span" sx={{ color: '#257C42' }}>
+            <Box component="span" sx={{ color: '#17426C' }}>
                 {suffix}
             </Box>
         </Typography>
@@ -108,9 +108,9 @@ const BrandsTrust = () => {
             }}
         >
             {/* Concentric Rings with responsive sizes */}
-            <Box sx={{ position: 'absolute', width: '100%', height: '100%', borderRadius: '50%', bgcolor: '#438059', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }} />
-            <Box sx={{ position: 'absolute', width: '80%', height: '80%', borderRadius: '50%', bgcolor: '#7BA68C', boxShadow: '0 10px 35px rgba(0,0,0,0.1)' }} />
-            <Box sx={{ position: 'absolute', width: '55%', height: '55%', borderRadius: '50%', bgcolor: '#B5CCBE', boxShadow: '0 8px 30px rgba(0,0,0,0.08)' }} />
+            <Box sx={{ position: 'absolute', width: '100%', height: '100%', borderRadius: '50%', bgcolor: '#17426C', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }} />
+            <Box sx={{ position: 'absolute', width: '80%', height: '80%', borderRadius: '50%', bgcolor: '#335b83ff', boxShadow: '0 10px 35px rgba(0,0,0,0.1)' }} />
+            <Box sx={{ position: 'absolute', width: '55%', height: '55%', borderRadius: '50%', bgcolor: '#97b4d1ff', boxShadow: '0 8px 30px rgba(0,0,0,0.08)' }} />
 
             {/* Center Circle */}
             <Box

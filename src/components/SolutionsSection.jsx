@@ -94,7 +94,7 @@ const SolutionCard = ({ title, highlight, description, align = 'left' }) => {
                     }}
                 >
                     {title} <br />
-                    <Box component="span" sx={{ color: '#257C42' }}>
+                    <Box component="span" sx={{ color: '#17426C' }}>
                         {highlight}
                     </Box>
                 </Typography>
@@ -116,8 +116,8 @@ const SolutionCard = ({ title, highlight, description, align = 'left' }) => {
                 <Button
                     variant="contained"
                     sx={{
-                        bgcolor: '#1a5930', // Forest Green matching the image
-                        color: '#fff',
+                        bgcolor: '#AFD450', // Forest Green matching the image
+                        color: '#17426C',
                         fontFamily: 'Poppins',
                         fontWeight: 600,
                         fontSize: '18px',

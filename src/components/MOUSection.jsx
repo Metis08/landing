@@ -26,7 +26,7 @@ const MOUSection = () => {
                     position: 'relative',
                     overflow: 'hidden',
                     border: '1px solid rgba(37, 124, 66, 0.15)',
-                    background: 'linear-gradient(135deg, #F9FBF9 0%, #E8F5E9 100%)',
+                    background: 'linear-gradient(135deg, #17426C 0%, #17426C 100%)',
                     boxShadow: '0 20px 60px rgba(37, 124, 66, 0.05)',
                     '&::before': {
                         content: '""',
@@ -57,21 +57,21 @@ const MOUSection = () => {
                             fontFamily: 'Poppins',
                             fontWeight: 700,
                             fontSize: { xs: '32px', md: '56px', lg: '64px' },
-                            color: '#000',
+                            color: '#ffffffff',
                             mb: 3,
                             letterSpacing: '-0.03em',
                             lineHeight: 1.1
                         }}
                     >
                         MOU Advantage <br />
-                        <Box component="span" sx={{ color: '#257C42' }}>for ICAI Members</Box>
+                        <Box component="span" sx={{ color: '#ffffffff' }}>for ICAI Members</Box>
                     </Typography>
 
                     <Typography
                         sx={{
                             fontFamily: 'Poppins',
                             fontSize: { xs: '18px', md: '22px' },
-                            color: '#444',
+                            color: '#c5c5c5ff',
                             mb: 6,
                             maxWidth: '900px',
                             lineHeight: 1.6,
@@ -93,14 +93,14 @@ const MOUSection = () => {
                                     alignItems: 'center',
                                     justifyContent: 'center'
                                 }}>
-                                    <CheckCircleIcon sx={{ color: '#257C42', fontSize: '20px' }} />
+                                    <CheckCircleIcon sx={{ color: '#AFD450', fontSize: '20px' }} />
                                 </Box>
                                 <Typography
                                     sx={{
                                         fontFamily: 'Poppins',
                                         fontWeight: 600,
                                         fontSize: { xs: '18px', md: '20px' },
-                                        color: '#333'
+                                        color: '#a7a7a7ff'
                                     }}
                                 >
                                     {point}
@@ -113,7 +113,7 @@ const MOUSection = () => {
                         sx={{
                             fontFamily: 'Poppins',
                             fontSize: { xs: '14px', md: '16px' },
-                            color: '#666',
+                            color: '#c0c0c0ff',
                             fontWeight: 400,
                             opacity: 0.8
                         }}
@@ -128,8 +128,8 @@ const MOUSection = () => {
                             bottom: { md: '0px' },
                             right: { md: '0px' },
                             mt: { xs: 4, md: 0 },
-                            bgcolor: '#1a5930',
-                            color: '#fff',
+                            bgcolor: '#AFD450',
+                            color: '#17426C',
                             fontWeight: 700,
                             fontSize: { xs: '18px', md: '20px' },
                             px: { xs: 5, md: 7 },
@@ -164,7 +164,7 @@ const MOUSection = () => {
                         letterSpacing: '-0.04em'
                     }}
                 >
-                    Choose Privacy <Box component="span" sx={{ color: '#257C42' }}>Choose Us</Box>
+                    Choose Privacy <Box component="span" sx={{ color: '#17426C' }}>Choose Us</Box>
                 </Typography>
 
                 <Box
@@ -179,7 +179,7 @@ const MOUSection = () => {
                     {/* ISO Badge Card */}
                     <Box
                         sx={{
-                            background: 'rgba(255, 255, 255, 0.8)',
+                            background: '#AFD450',
                             backdropFilter: 'blur(10px)',
                             border: '1px solid rgba(0, 0, 0, 0.08)',
                             borderRadius: '32px',
@@ -192,12 +192,12 @@ const MOUSection = () => {
                             cursor: 'default',
                             '&:hover': {
                                 transform: 'translateY(-10px)',
-                                borderColor: '#257C42',
+                                borderColor: '#17426C',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.06)'
                             }
                         }}
                     >
-                        <SecurityIcon sx={{ color: '#257C42', fontSize: '40px' }} />
+                        <SecurityIcon sx={{ color: '#17426C', fontSize: '40px' }} />
                         <Box sx={{ textAlign: 'left' }}>
                             <Typography sx={{ fontSize: '14px', fontWeight: 700, color: '#333', letterSpacing: '0.05em' }}>ISO 9001</Typography>
                             <Typography sx={{ fontSize: '11px', color: '#666', fontWeight: 400 }}>Quality Management</Typography>
@@ -209,7 +209,7 @@ const MOUSection = () => {
                         sx={{
                             width: '100px',
                             height: '100px',
-                            background: 'rgba(255, 255, 255, 0.8)',
+                            background: '#AFD450',
                             backdropFilter: 'blur(10px)',
                             border: '1px solid rgba(0, 0, 0, 0.08)',
                             borderRadius: '50%',
@@ -221,19 +221,19 @@ const MOUSection = () => {
                             cursor: 'default',
                             '&:hover': {
                                 transform: 'scale(1.1) rotate(5deg)',
-                                borderColor: '#257C42',
+                                borderColor: '#17426C',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.06)'
                             }
                         }}
                     >
-                        <CloudQueueIcon sx={{ color: '#257C42', fontSize: '32px', mb: 0.5 }} />
+                        <CloudQueueIcon sx={{ color: '#17426C', fontSize: '32px', mb: 0.5 }} />
                         <Typography sx={{ fontSize: '12px', fontWeight: 700, color: '#333' }}>aws</Typography>
                     </Box>
 
                     {/* ICAI Partner Card */}
                     <Box
                         sx={{
-                            background: 'rgba(255, 255, 255, 0.8)',
+                            background: '#AFD450',
                             backdropFilter: 'blur(10px)',
                             border: '1px solid rgba(0, 0, 0, 0.08)',
                             borderRadius: '32px',
@@ -251,10 +251,10 @@ const MOUSection = () => {
                             }
                         }}
                     >
-                        <HandshakeIcon sx={{ color: '#257C42', fontSize: '40px' }} />
+                        <HandshakeIcon sx={{ color: '#17426C', fontSize: '40px' }} />
                         <Box sx={{ textAlign: 'left' }}>
-                            <Typography sx={{ fontSize: '14px', fontWeight: 700, color: '#333', letterSpacing: '0.05em' }}>PARTNERED</Typography>
-                            <Typography sx={{ fontSize: '11px', color: '#666', fontWeight: 400 }}>WITH ICAI</Typography>
+                            <Typography sx={{ fontSize: '14px', fontWeight: 700, color: '#000000ff', letterSpacing: '0.05em' }}>PARTNERED</Typography>
+                            <Typography sx={{ fontSize: '11px', color: '#424242ff', fontWeight: 400 }}>WITH ICAI</Typography>
                         </Box>
                     </Box>
                 </Box>

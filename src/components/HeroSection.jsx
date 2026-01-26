@@ -10,7 +10,7 @@ const HeroSection = () => {
                 sx={{
                     width: '100%',
                     minHeight: { xs: 'auto', md: '65vh' },
-                    background: 'linear-gradient(180deg, #F9FBF9 0%, #438059 100%)',
+                    background: 'linear-gradient(180deg, #fdfeffff 0%, #17426C 100%)',
                     borderRadius: { xs: '24px', md: '32px' },
                     border: '1px solid #43805940',
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
                             letterSpacing: '-0.02em',
                         }}
                     >
-                        <Box component="span" sx={{ color: '#257C42' }}>
+                        <Box component="span" sx={{ color: '#17426C' }}>
                             Technology
                         </Box>{' '}
                         based compliance solutions for businesses
@@ -91,8 +91,8 @@ const HeroSection = () => {
                     variant="outlined"
                     sx={{
                         fontFamily: 'Poppins',
-                        borderColor: '#438059',
-                        color: '#438059',
+                        borderColor: '#AFD450',
+                        color: '#17426C',
                         px: { xs: 3, md: 4 },
                         py: { xs: 1.2, md: 1.5 },
                         fontSize: { xs: '16px', md: '18px', lg: '20px' },
@@ -109,12 +109,13 @@ const HeroSection = () => {
                     disableElevation
                     sx={{
                         fontFamily: 'Poppins',
-                        backgroundColor: '#438059',
+                        backgroundColor: '#AFD450',
                         px: { xs: 4, md: 5 },
                         py: { xs: 1.2, md: 1.5 },
                         fontSize: { xs: '16px', md: '18px', lg: '20px' },
                         borderRadius: '100px',
                         textTransform: 'none',
+                        color: '#17426C',
                         width: { xs: '100%', sm: 'auto' },
                         '&:hover': {
                             backgroundColor: '#366848',
